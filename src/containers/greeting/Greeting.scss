@@ -1,33 +1,40 @@
 @import "../../_globalColor";
 
+/* === Shared layout === */
 .main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 2rem;
+
+  /* ✅ Add top padding to prevent overlap with header */
+  padding-top: 100px;
+
+  @media (max-width: 768px) {
+    padding-top: 120px;
+  }
 }
 
+/* === Flex layout === */
 .greeting-main {
   display: flex;
+
+  > * {
+    flex: 1;
+    margin-bottom: 30px;
+  }
 }
 
+/* === Elements === */
 .subTitle {
   color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
-}
-
-.greeting-main > * {
-  flex: 1;
-  margin-bottom: 30px;
 }
 
 .empty-div {
@@ -38,6 +45,7 @@
   display: flex;
   margin-top: 40px;
 }
+
 .download-link-button {
   text-decoration: none;
 }
@@ -59,38 +67,22 @@
 }
 
 .wave-emoji {
-  animation-duration: 1.8s;
-  animation-iteration-count: infinite;
-  animation-name: wave;
+  animation: wave 1.8s infinite;
   display: inline-block;
   transform-origin: 70% 70%;
 }
 
 @keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(12deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(9deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
-/* Media Query */
+/* === Responsive === */
 @media (max-width: 1380px) {
   .greeting-text {
     font-size: 50px;
@@ -99,6 +91,7 @@
     font-size: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .button-greeting-div {
     justify-content: space-around;
