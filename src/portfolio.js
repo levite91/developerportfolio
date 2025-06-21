@@ -26,8 +26,7 @@ const greeting = {
   subTitle: emoji(
     "A passionate Full Stack Developer  with hands-on experience building Web and Mobile applications using JavaScript, React.js, Node.js, React Native, Java, Spring Boot — and working across health tech, EMRs, biometrics, and more."
   ),  
-  resumeLink:
-    "https://drive.google.com/file/d/152akL5W-q2MXeT-WuVhxk7VjtCGDue9q/view?usp=drive_link", // Set to empty to hide the button
+  resumeLink:"https://drive.google.com/file/d/152akL5W-q2MXeT-WuVhxk7VjtCGDue9q/view?usp=drive_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -166,7 +165,7 @@ const workExperiences = {
       company: "Johns Hopkins University (JHPIEGO) - RISE Project (PEPFAR USAID)",
       companylogo: require("./assets/images/jhpiego.jpg"), // Replace with actual logo path
       date: "August 2021 – October 2022",
-      desc: "Health informatics support in developing and deploying electronic systems across health facilities in Taraba State.",
+      desc: "Health informatics support in developing and deploying electronic systems across health facilities in Adamawa State.",
       descBullets: [
         "Designed, developed, and maintained EMRs (LAMIS, LAMISPlus) and biometric systems",
         "Built interactive Power BI dashboards to visualize performance metrics",
